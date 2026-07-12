@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         id="WebApp_ID" version="3.1">
+  
+  <display-name>Phishing Email Detector</display-name>
+  
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+
+  <!-- Index Servlet -->
+  <servlet>
+    <servlet-name>IndexServlet</servlet-name>
+    <servlet-class>com.phishingdetector.servlet.IndexServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>IndexServlet</servlet-name>
+    <url-pattern>/index</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>IndexServlet</servlet-name>
+    <url-pattern>/home</url-pattern>
+  </servlet-mapping>
+
+  <!-- Detect Servlet -->
+  <servlet>
+    <servlet-name>DetectServlet</servlet-name>
+    <servlet-class>com.phishingdetector.servlet.DetectServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DetectServlet</servlet-name>
+    <url-pattern>/detect</url-pattern>
+  </servlet-mapping>
+
+  <!-- URL Scan Servlet -->
+  <servlet>
+    <servlet-name>UrlScanServlet</servlet-name>
+    <servlet-class>com.phishingdetector.servlet.UrlScanServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UrlScanServlet</servlet-name>
+    <url-pattern>/urlscan</url-pattern>
+  </servlet-mapping>
+
+  <!-- Character Encoding Filter -->
+  <filter>
+    <filter-name>CharacterEncodingFilter</filter-name>
+    <filter-class>com.phishingdetector.filters.CharacterEncodingFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>CharacterEncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <!-- Error Pages -->
+  <error-page>
+    <error-code>404</error-code>
+    <location>/error.jsp</location>
+  </error-page>
+  <error-page>
+    <error-code>500</error-code>
+    <location>/error.jsp</location>
+  </error-page>
+
+</web-app>
