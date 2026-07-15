@@ -203,11 +203,19 @@ Through this project I gained practical experience with:
 
 ## 👨‍💻 Author
 
-**Yash Thubokar**
+## 👨‍💻 Team
 
-Final Year B.E. Computer Science Engineering Student
+**Core Java Development Team**
 
-Interested in **Java Development**, **Backend Engineering**.
+Final Year B.E. Computer Science Engineering Students  
 
+Focused on **Java Development**, **Backend Engineering**, and **Collaborative Software Projects**.  
+
+### Members
+- **Yash Thubokar**
+- **Abhijeet Kisharsagar**
+-  **Vivek Ingole**
+-  **Ayush Bhagat**
+  
 ---
 
